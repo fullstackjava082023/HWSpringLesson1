@@ -10,7 +10,12 @@
     </bean>
 
     <bean id ="simpleMenu" class="org.example.SimpleMenu">
-
+        <property name="menuItems">
+            <list>
+                <ref bean="burger"/>
+                <ref bean="pizza"/>
+            </list>
+        </property>
     </bean>
 
     <bean id ="burger" class="org.example.MenuItem">
