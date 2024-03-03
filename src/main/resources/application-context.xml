@@ -4,9 +4,16 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
      https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="restaurant" class="org.example.Restaurant">
-        <property name="restaurantName" value="starksAndSons"/>
-        <property name="menu" ref="simpleMenu" />
+    <bean id ="burger" class="org.example.MenuItem">
+        <property name="name" value="Burger"/>
+        <property name="description" value="Juicy beef patty on a sesame seed bun"/>
+        <property name="price" value="8.99"/>
+    </bean>
+
+    <bean id = "pizza" class="org.example.MenuItem">
+        <property name="name" value="Pizza"/>
+        <property name="description" value="Thin crust pizza with assorted toppings"/>
+        <property name="price" value="10.99"/>
     </bean>
 
     <bean id ="simpleMenu" class="org.example.SimpleMenu">
@@ -18,16 +25,10 @@
         </property>
     </bean>
 
-    <bean id ="burger" class="org.example.MenuItem">
-        <property name="name" value="Burger"/>
-        <property name="description" value="Juicy beef patty on a sesame seed bun"/>
-        <property name="price" value="8.99"/>
-    </bean>
 
-    <bean id = "pizza" class="org.example.MenuItem">
-        <property name="name" value="Pizza"/>
-        <property name="description" value="Thin crust pizza with assorted toppings"/>
-        <property name="price" value="10.99"/>
+    <bean id="restaurant" class="org.example.Restaurant">
+        <property name="restaurantName" value="starksAndSons"/>
+        <property name="menu" ref="simpleMenu" />
     </bean>
 
 

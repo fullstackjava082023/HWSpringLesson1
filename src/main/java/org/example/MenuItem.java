@@ -7,6 +7,7 @@ public class MenuItem {
 
     public MenuItem() {
 
+
     }
 
     public MenuItem(String name, String description, double price) {
